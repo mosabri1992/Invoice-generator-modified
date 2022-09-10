@@ -85,11 +85,11 @@ public class Controller implements ActionListener , ListSelectionListener{
                    case "Delete Invoice":
                 DeleteInvoice();
                 break;
-                   case "Save":
-                save();
+                   case "Create Item":
+                CreateItem();
                 break;
-                   case "Cancel":
-                cancel();
+                   case "Delete Item":
+                DeleteItem();
                 break;
                  case "createInvoiceCancel":
                 Createinvoicecancel();
@@ -174,21 +174,23 @@ public class Controller implements ActionListener , ListSelectionListener{
 
     private void savefile() {
         
-        ArrayList<Invoice> invoices = frame.getInvoice();
+        ArrayList<Invoice> invoices1 = frame.getInvoice();
         String header = "";
         String line = "";
-        for(Invoice invoice : invoices)
+        for(Invoice invoice2 : invoices1)
         {
-            String invoicecsv = invoice.getAsCSV();
+            String invoicecsv = invoice2.getAsCSV();
             header+=invoicecsv;
-            header+="/n";
-            for (Line line1 : invoice.getLines()) {
+            header+="\n";
+        
+            for (Line line1 : invoice2.getLines()) {
                 
                 String lcsv = line1.getAsCSV();
                 line+=lcsv;
-                line+="/n";
+                line+="\n";
                 
             }
+        }
             try {
             JFileChooser fc = new JFileChooser();
           int result = fc.showSaveDialog(frame);
@@ -199,27 +201,24 @@ public class Controller implements ActionListener , ListSelectionListener{
                         headerwriter.write(header);
                         headerwriter.flush();
                         headerwriter.close();
-                        result = fc.showSaveDialog(frame);
+                         result = fc.showSaveDialog(frame);
                         if (result == JFileChooser.APPROVE_OPTION )
                         {
                             File linefile = fc.getSelectedFile();
-                            FileWriter linewriter = new FileWriter(headerfile);
-                            linewriter.write(header);
+                            FileWriter linewriter = new FileWriter(linefile);
+                            linewriter.write(line);
                             linewriter.flush();
                             linewriter.close();
                         }
                         
                     }
             
-        } catch(IOException ex){
+        } catch(Exception ex){
             
         }
         
         
-        } 
-                
-        
-    }
+       }
 
     private void CreateNewInvoice() {
         
@@ -240,23 +239,22 @@ public class Controller implements ActionListener , ListSelectionListener{
       }
     }
 
-    private void save() {
-          String date = frame.getInvoicedate().getText();
-      String customer = frame.getCstname().getText();
-       int selectedrow = frame.getInvoicetable().getSelectedRow();
-        int index1 = Integer.parseInt(frame.getInvoicenumber().getText()) ;
-      if(index1 >-1){
-      Invoice invoices = new Invoice (index1,date,customer);
-      frame.getInvoice().remove(selectedrow);
-      frame.getInvoice().add(invoices);
-      frame.getTablemodel().fireTableDataChanged();
-      }
+    private void CreateItem() {
+        lineDialog = new LineDialog(frame);
+        lineDialog.setVisible(true);
     }
 
-    private void cancel() {
+    private void DeleteItem() {
         
         
-        System.exit(0);
+        int selectedrow = frame.getLinetable().getSelectedRow();
+      
+      if(selectedrow >-1)
+      {
+          frame.getInvoice().remove(selectedrow);
+          frame.getTablemodel().fireTableDataChanged();
+          
+      }
         
     }
 
@@ -282,14 +280,7 @@ public class Controller implements ActionListener , ListSelectionListener{
         invoiceDialog = null;
         
         
-        // creates lines dialoge that comes out after the invoice dialoge
-        
-        lineDialog = new LineDialog(frame);
-        lineDialog.setVisible(true);
-               
-      
-      
-    }
+       }
 
     private void CreatecreateLineCancel() {
 

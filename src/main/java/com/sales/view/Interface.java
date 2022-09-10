@@ -15,6 +15,8 @@ import javax.swing.JTextField;
  */
 
 public class Interface extends javax.swing.JFrame {
+   
+   
     
 
     /**
@@ -53,8 +55,8 @@ public class Interface extends javax.swing.JFrame {
         createinvoicebutton.addActionListener(controller);
         deleteinvoicebutton = new javax.swing.JButton();
         deleteinvoicebutton.addActionListener(controller);
-        savebutton = new javax.swing.JButton();
-        savebutton.addActionListener(controller);
+        CreateLine = new javax.swing.JButton();
+        CreateLine.addActionListener(controller);
         cancel = new javax.swing.JButton();
         cancel.addActionListener(controller);
         invoicetotal = new javax.swing.JLabel();
@@ -140,14 +142,14 @@ public class Interface extends javax.swing.JFrame {
 
         deleteinvoicebutton.setText("Delete Invoice");
 
-        savebutton.setText("Save");
-        savebutton.addActionListener(new java.awt.event.ActionListener() {
+        CreateLine.setText("Create Item");
+        CreateLine.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                savebuttonActionPerformed(evt);
+                CreateLineActionPerformed(evt);
             }
         });
 
-        cancel.setText("Cancel");
+        cancel.setText("Delete Item");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
@@ -233,7 +235,7 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(savebutton)
+                .addComponent(CreateLine)
                 .addGap(18, 18, 18)
                 .addComponent(cancel)
                 .addGap(63, 63, 63))
@@ -273,7 +275,7 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(deleteinvoicebutton))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(savebutton)
+                    .addComponent(CreateLine)
                     .addComponent(cancel))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -289,7 +291,7 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_loadActionPerformed
 
-    private void savebuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savebuttonActionPerformed
+    private void CreateLineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreateLineActionPerformed
         
         
         
@@ -297,7 +299,7 @@ public class Interface extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_savebuttonActionPerformed
+    }//GEN-LAST:event_CreateLineActionPerformed
 
     private void invoicedateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_invoicedateActionPerformed
         // TODO add your handling code here:
@@ -343,6 +345,7 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton CreateLine;
     private javax.swing.JLabel Invoicenumber;
     private javax.swing.JTable Linetable;
     private javax.swing.JButton cancel;
@@ -366,7 +369,6 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable2;
     private javax.swing.JMenuItem load;
-    private javax.swing.JButton savebutton;
     private javax.swing.JMenuItem savemenu;
     // End of variables declaration//GEN-END:variables
 private ArrayList<Invoice>invoice ;

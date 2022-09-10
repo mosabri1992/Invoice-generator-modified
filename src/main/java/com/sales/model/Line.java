@@ -71,7 +71,7 @@ public class Line {
     
     public String getAsCSV(){
          
-         return invoice.getIndex() +","+itemname+","+price+""+ammount;
+         return invoice.getIndex() +","+itemname+","+price+""+ammount ;
      }
     
 }
