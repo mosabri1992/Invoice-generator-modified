@@ -1,0 +1,55 @@
+@options
+@packages
+@argfile
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2022. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'invoice_printer 1.0 API'
+-use
+-version
+-windowtitle
+'invoice_printer 1.0 API'
+com.sales.controller
+com.sales.model
+com.sales.view
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/controller/Controller.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/model/Invoice.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/model/Line.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/model/LinesTableModel.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/model/TableModel.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/view/Interface.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/view/InvoiceDialog.java'
+'C:/Users/CompuFast/Documents/NetBeansProjects/invoice_printer/src/main/java/com/sales/view/LineDialog.java'
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\src\main\java = 1661431719064
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\allclasses-index.html = 1662825930953
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\allpackages-index.html = 1662825930955
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\element-list = 1662825930856
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\help-doc.html = 1662825930977
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\index-all.html = 1662825930971
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\index.html = 1662825930942
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\jquery-ui.overrides.css = 1662825931002
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\member-search-index.js = 1662825930960
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\module-search-index.js = 1662825930956
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\overview-summary.html = 1662825930973
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\overview-tree.html = 1662825930939
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\package-search-index.js = 1662825930958
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\script.js = 1662825930979
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\search.js = 1662825930981
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\serialized-form.html = 1662825930899
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\stylesheet.css = 1662825930978
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\tag-search-index.js = 1662825930961
+C:\Users\CompuFast\Documents\NetBeansProjects\invoice_printer\target\site\apidocs\type-search-index.js = 1662825930959

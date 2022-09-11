@@ -246,14 +246,16 @@ public class Controller implements ActionListener , ListSelectionListener{
 
     private void DeleteItem() {
         
-        
+        int selectedinvoice = frame.getInvoicetable().getSelectedRow();
         int selectedrow = frame.getLinetable().getSelectedRow();
       
-      if(selectedrow >-1)
+      if(selectedinvoice !=-1 && selectedrow!=-1)
       {
-          frame.getInvoice().remove(selectedrow);
-          frame.getTablemodel().fireTableDataChanged();
-          
+       Invoice invoice = frame.getInvoice().get(selectedinvoice);
+       invoice.getLines().remove(selectedrow);
+       LinesTableModel linestablemodel = new LinesTableModel(invoice.getLines());
+       frame.getLinetable().setModel(linestablemodel);
+       linestablemodel.fireTableDataChanged();
       }
         
     }

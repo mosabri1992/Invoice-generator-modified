@@ -459,7 +459,7 @@ private Controller controller = new Controller(this);
         int counter = 0;
         for(Invoice invoices : invoice)
         {
-            if (invoices.getIndex()>=index1) 
+            if (invoices.getIndex()>index1) 
                 
                 index1 = invoices.getIndex();
                 
@@ -470,7 +470,7 @@ private Controller controller = new Controller(this);
         }
         
         
-        return index1++;
+        return ++index1;
         
     }
      
